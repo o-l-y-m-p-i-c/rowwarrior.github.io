@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Outfit-Light';
+    src: url('../fonts/Outfit/Outfit-Light.ttf');
+}
+@font-face {
+    font-family: 'Outfit-Regular';
+    src: url('../fonts/Outfit/Outfit-Regular.ttf');
+}
+@font-face {
+    font-family: 'Outfit-Medium';
+    src: url('../fonts/Outfit/Outfit-Medium.ttf');
+}
+@font-face {
+    font-family: 'Outfit-Bold';
+    src: url('../fonts/Outfit/Outfit-Bold.ttf');
+}
+
+:root{
+    --font-1: 'Outfit-Light';
+    --font-2: 'Outfit-Regular';
+    --font-3: 'Outfit-Medium';
+    --font-4: 'Outfit-Bold';
+
+    --main-text-color: #ffffff;
+    --btn-text-color: #ffffff;
+
+    --btn-bg-color: '';
+
+    --p-font-size: 14px;
+
+    --header-1-font-size: 24px;
+    --header-2-font-size: 20px;
+    --header-3-font-size: 18px;
+    --header-4-font-size: 16px;
+
+
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    font-family: var(--font-1);
+}
+
+
+ul,p,li{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.d-flex{
+    display: flex;
+}
+.justify-content-space-between{
+    justify-content: space-between;
+}

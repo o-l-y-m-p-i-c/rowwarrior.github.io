@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROW WARRiOR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="./assets/css/bootstrap5/bootstrap.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">    <link rel="stylesheet" href="./assets/css/swipper/swiper-bundle.css">
+    <link rel="stylesheet" href="./assets/css/root.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header class="position-absolute w-100">
+        <div class="header  d-flex align-items-center justify-content-space-between">
+            <nav class="header-nav header-column">
+                <ul class="header-nav-list d-flex gap-3">
+                    <li class="header-nav-item list-unstyled "> 
+                        <a href="./shop.html"  class="header-nav-link p-2 d-block text-decoration-none text-white" >
+                            SHOP
+                        </a>
+                    </li>
+                    <li class="header-nav-item list-unstyled "  >
+                        <a href="./about.html" class="header-nav-link p-2 d-block text-decoration-none text-white" >
+                            ABOUT
+                        </a>
+                    </li>
+                    <li class="header-nav-item list-unstyled ">
+                        <a href="./contacts.html" class="header-nav-link p-2 d-block text-decoration-none text-white" >
+                            CONTACTS
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-logo position-absolute text-white" style="left: 50%; transform: translateX(-50%); " >
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="360" height="38" viewBox="0 0 360 38">
+                    <image id="Layer_63_copy" data-name="Layer 63 copy" width="100%" height="38" xlink:href="data:img/png;base64,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"/>
+                </svg>
+                  
+            </div>  
+
+            <nav class="header-column">
+                <ul class="header-nav-list d-flex gap-3  ">
+                    <li class="header-nav-item list-unstyled">
+                        <a href="./contacts.html" class="btn btn-white btn-floating text-decoration-none" >
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="header-nav-item list-unstyled">
+                        <a href="./contacts.html" class="btn btn-white btn-floating text-decoration-none" >
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li class="header-nav-item list-unstyled">
+                        <a href="./contacts.html" class="btn btn-white btn-floating text-decoration-none" >
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    
+                  
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Banner -->
+        <section id="" class=" index-banner min-vh-100" >
+            <div class=" video-wrapper w-100 min-vh-100">
+                <img src="./assets/img/pages/index/banner.jpg" alt="">
+                <!-- <video  class="position-absolute  " loop autoplay  src="./assets/img/pages/index/banner_pc.mp4" alt=""> </video> -->
+            </div>
+        </section>
+        <!-- Meet row warrior -->
+        <section class="min-vh-100" >
+            <div class="container d-flex align-items-center justify-content-center h-100">
+                <p class="font-size-50 text-dark-blue text-center" >
+                    Your Home Gym Secret Weapon <br/ >
+                    for Transforming Your <br/ >
+                    Strength, Health, Body and Life.<br/ >
+                </p>
+            </div>
+            
+        </section>
+
+
+        <section id="" class="vertical-slider-wrapper js-wrapper"  >
+            <div class="min-vh-100 vertical-slider-sticky ">
+                <div class="vertical-slider-collection ">
+                    <div class="vertical-slider-item js-item custom-dark-blue-bg">
+                        <img class="js-item-img " src="./assets/img/pages/index/tab1.png" alt="">
+                    </div>
+                    <div class="vertical-slider-item js-item custom-light-blue-bg">
+                        <img class="js-item-img w-50" src="./assets/img/pages/index/tab2.png" alt="">
+                    </div>
+
+                    <div class="vertical-slider-item  js-item custom-dark-blue-bg">
+                        <img class="js-item-img " src="./assets/img/pages/index/tab3.png" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="vertical-navigation-collection js-id-collection">
+                <div class="vertical-navigation-collection-item js-id-item" id="first" >
+
+                </div>
+                <div class="vertical-navigation-collection-item js-id-item" id="second" >
+
+                </div>
+                <div class="vertical-navigation-collection-item js-id-item" id="third" >
+
+                </div>
+
+            </div>
+            <div class="vertical-slider-tab-collection">
+                <div class="vertical-slider-tab-inner d-flex justify-content-center py-2 px-5 flex-dir-col align-items-end  ">
+                   
+                    <div class="content-wrapper d-flex flex-dir-col max-width-800  ">
+                        <div class="vertical-slider-tab-header rounded-pill position-relative ">
+                            <ul class="d-flex  align-items-center js-header-collection">
+                                <li class="list-unstyled">
+                                    <a class=" vertical-slider-link  text-decoration-none   active" href="#first">
+                                        VERSATILITY
+                                    </a>
+                                </li>
+                                <li class="list-unstyled">
+                                    <a class="vertical-slider-link text-decoration-none " href="#second">
+                                        SIMPLE ASSEMBLY
+                                    </a>
+                                </li>
+                                <li class="list-unstyled">
+                                    <a class="vertical-slider-link text-decoration-none  " href="#third">
+                                        COMPACT DESIGN
+                                    </a>
+                                </li>
+                                <li class="list-unstyled">
+                                    <a class="vertical-slider-link text-decoration-none  " href="#forth">
+                                        EASE OF USE
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="bg-light toggle-back rounded-pill" style="width:170px; height: 100%; position: absolute; z-index: -1;">
+
+                            </div>
+                        </div>
+                        <div class=" vertical-slider-tab-content">
+                            <div class="tab-1 text-white">
+                               <h5 class="text-black font-size-26">
+                                    VERSATILITY
+                               </h5>
+                               <h3 class="font-size-50 mt-45">
+                                    GET A SOLID, LOW-IMPACT, FULL-BODY WORKOUT AT  HOME.
+                               </h3>
+                               <p class="mt-70 font-size-26">
+                                    Like a Swiss army knife, Row Warrior is a tool that provides a
+                                    wide array of benefits. Use it to build muscle, gain strength,
+                                    improve cardio, increase stamina, or simply improve your
+                                    overall well-being without ever walking out your door.                               
+                                </p>
+                            </div>
+                            <!-- <div class="text-white">
+                                something in 2
+                            </div>
+                            <div class="text-white">
+                                something in 3
+                            </div> -->
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section class="min-vh-100" ></section>
+
+        <section id="" class="vertical-slider-wrapper js-wrapper"  >
+            <div class="min-vh-100 vertical-slider-sticky ">
+                <div class="vertical-slider-collection ">
+                    <div class="vertical-slider-item js-item custom-dark-blue-bg">
+                        <img class="js-item-img " src="./assets/img/pages/index/tab1.png" alt="">
+                    </div>
+                    <div class="vertical-slider-item js-item custom-light-blue-bg">
+                        <img class="js-item-img w-50" src="./assets/img/pages/index/tab2.png" alt="">
+                    </div>
+
+                    <div class="vertical-slider-item  js-item custom-dark-blue-bg">
+                        <img class="js-item-img " src="./assets/img/pages/index/tab3.png" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="vertical-navigation-collection js-id-collection">
+                <div class="vertical-navigation-collection-item js-id-item" id="first1" >
+
+                </div>
+                <div class="vertical-navigation-collection-item js-id-item" id="second2" >
+
+                </div>
+                <div class="vertical-navigation-collection-item js-id-item" id="third3" >
+
+                </div>
+
+            </div>
+            <div class="vertical-slider-tab-collection">
+                <div class="vertical-slider-tab-inner d-flex justify-content-center py-2 px-5 flex-dir-col align-items-end  ">
+                   
+                    <div class="content-wrapper d-flex flex-dir-col max-width-800  ">
+                        <div class="vertical-slider-tab-header rounded-pill position-relative ">
+                            <ul class="d-flex  align-items-center js-header-collection">
+                                <li class="list-unstyled">
+                                    <a class=" vertical-slider-link  text-decoration-none   active" href="#first1">
+                                        VERSATILITY
+                                    </a>
+                                </li>
+                                <li class="list-unstyled">
+                                    <a class="vertical-slider-link text-decoration-none " href="#second2">
+                                        SIMPLE ASSEMBLY
+                                    </a>
+                                </li>
+                                <li class="list-unstyled">
+                                    <a class="vertical-slider-link text-decoration-none  " href="#third3">
+                                        COMPACT DESIGN
+                                    </a>
+                                </li>
+                                <li class="list-unstyled">
+                                    <a class="vertical-slider-link text-decoration-none  " href="#forth4">
+                                        EASE OF USE
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="bg-light toggle-back rounded-pill" style="width:170px; height: 100%; position: absolute; z-index: -1;">
+
+                            </div>
+                        </div>
+                        <div class=" vertical-slider-tab-content">
+                            <div class="tab-1 text-white">
+                               <h5 class="text-black font-size-26">
+                                    VERSATILITY
+                               </h5>
+                               <h3 class="font-size-50 mt-45">
+                                    GET A SOLID, LOW-IMPACT, FULL-BODY WORKOUT AT  HOME.
+                               </h3>
+                               <p class="mt-70 font-size-26">
+                                    Like a Swiss army knife, Row Warrior is a tool that provides a
+                                    wide array of benefits. Use it to build muscle, gain strength,
+                                    improve cardio, increase stamina, or simply improve your
+                                    overall well-being without ever walking out your door.                               
+                                </p>
+                            </div>
+                            <!-- <div class="text-white">
+                                something in 2
+                            </div>
+                            <div class="text-white">
+                                something in 3
+                            </div> -->
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="footer"> 
+
+        </div>
+    </footer>
+
+    <script> 
+        const params = []
+        const sliderCollection = document.querySelectorAll('.js-wrapper');
+        const SliderCustom = {
+            delay: 1,
+            wrapperHeight:150,
+            ScreenTop:0,
+            ScreenHeight:0,
+            params:[],
+            paramsExampleObj:{
+                height:0,
+                top:0,
+                item: null,
+                play:0,
+            },
+            init: (props) =>{
+                const {sliderParents} = props
+                SliderCustom.addSliders(sliderParents)
+                SliderCustom.setWrapperHeight(SliderCustom.params)
+                SliderCustom.checkItems(SliderCustom.params)
+
+            },
+            cloneParam: (item)=>{
+                const cloneObj = Object.assign({},SliderCustom.paramsExampleObj)
+                cloneObj.height = item.getBoundingClientRect().height
+                cloneObj.top = item.getBoundingClientRect().top
+                cloneObj.item = item
+                return cloneObj
+            },
+            addParam: (obj) =>{
+                // need to check validity of params
+
+                // push params to array
+                SliderCustom.params.push(obj)
+            },
+            addSliders: (itemArr) =>{
+                itemArr.forEach(slider => 
+                    {
+                        const i = SliderCustom.cloneParam(slider)
+                        SliderCustom.addParam(i)
+                    }
+                )
+            },
+            checkItems: (arrParents) =>{
+                arrParents.forEach((item,index) => {
+                    SliderCustom.checkItem(item,index)
+                })
+            },
+            setWrapperHeight: (items) => {
+                for(let i = 0; i < items.length; i++) { 
+                    const parent = items[i].item
+                    const childs = parent.querySelectorAll('.js-item')
+                    parent.style.minHeight = `${SliderCustom.wrapperHeight * childs.length}vh`
+
+                }
+            },
+            checkItem: (obj,index) =>{
+                const parent = obj.item
+                const items = parent.querySelectorAll('.js-item')
+                const height = obj.item.getBoundingClientRect().height
+                const top = obj.item.getBoundingClientRect().top
+                const divider = height / items.length
+                
+                if (parent.offsetTop  - (divider/SliderCustom.delay*1) < top + parent.offsetTop) {
+                    // const img =  items[obj.play].querySelector('.js-item.img')
+
+                    if (!items[0].classList.contains('visible')) {
+                        obj.play = 0
+                        console.log('turn on 1')
+                        for(let i = 0; i < items.length; i++){
+                            if(obj.play !== i){
+                               items[i].classList.remove('visible')
+                            }else{
+                                items[i].classList.add('visible')
+                            }
+                           
+                        }
+                    }
+                    // const img =  items[obj.play].querySelector('.js-item.img')
+
+                
+                }
+                else if(parent.offsetTop  - (divider/SliderCustom.delay*2) < top + parent.offsetTop){
+                    if (!items[1].classList.contains('visible')) {
+                        obj.play = 1
+                        console.log('turn on 2')
+                        for(let i = 0; i < items.length; i++){
+                            if(obj.play !== i){
+                               items[i].classList.remove('visible')
+                            }else{
+                                items[i].classList.add('visible')
+                            }
+                           
+                        }
+                        // SliderCustom.turnOff(items)
+                        // SliderCustom.turnOn(items[obj.play])
+                    }
+                }
+                else if(parent.offsetTop  - (divider/SliderCustom.delay*3) < top + parent.  offsetTop){
+                    if (!items[2].classList.contains('visible')) {
+                        obj.play = 2
+                        console.log('turn on 3')
+                        for(let i = 0; i < items.length; i++){
+                            if(obj.play !== i){
+                               items[i].classList.remove('visible')
+                            }else{
+                                items[i].classList.add('visible')
+                            }
+                           
+                        }
+                    }
+                }
+
+            },
+            changeCoords: (obj) =>{
+
+            },
+            turnOn: (item) =>{
+                item.classList.add('visible')
+            },
+            turnOff: (items) =>{
+                items.forEach(item => {
+                    item.classList.remove('visible')
+                })
+            },
+            setScreenSettings:()=>{
+                // console.log(window.screen)
+                // window.screenY
+            },
+            setObjSettings:(index,item)=>{
+
+            }
+        }
+        
+        
+        window.onload = () => {
+            SliderCustom.init({
+                sliderParents:document.querySelectorAll('.js-wrapper')
+            })
+        }
+        window.onscroll = (e) => {
+            SliderCustom.checkItems(SliderCustom.params)
+            // SliderCustom.setScreenSettings()
+        }
+        
+        document.querySelectorAll('.vertical-slider-link').forEach(item => {
+            item.onclick = () => {
+                const parent = item.closest('.js-header-collection')
+                console.log(parent)
+            }
+        })
+    
+    </script>
+    <!-- <script src="./assets/js/bootstrap/bootstrap.js" ></script> -->
+    <script src="./assets/js/script.js"></script> 
+    <!-- <script src="./assets/js/swipper/swiper-bundle.js"></script>  -->
+</body>
+</html>
+
+<!-- 
+<div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+    </div>
+    <div class="swiper-pagination"></div>
+  
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    <div class="swiper-scrollbar"></div>
+  </div> -->
